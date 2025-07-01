@@ -1,76 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shakil Ansari – Data Scientist Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shakil Ansari | Data Scientist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:Arial,sans-serif; color:#333; line-height:1.6; }
-    header { background: #001f3f url('assets/header.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:100px 20px; }
-    header img { width:150px; height:150px; border-radius:50%; border:4px solid #fff; margin-bottom:20px; }
-    header h1 { margin:10px 0; font-size:2.5rem; }
-    header p { font-size:1.2rem; max-width:600px; margin:auto; }
-    section { padding:60px 20px; max-width:900px; margin:auto; }
-    h2 { border-bottom:2px solid #001f3f; padding-bottom:10px; margin-bottom:20px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .card { background:#f9f9f9; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    .card img { width:100%; height:auto; border-radius:4px; }
-    footer { background:#001f3f; color:#fff; text-align:center; padding:20px; }
-    a { color:#001f3f; text-decoration:none; }
-    a:hover { text-decoration:underline; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: url("assets/header.jpg") center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px 80px;
+      color: #fff;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      color: #222;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="assets/shakilansari.jpg" alt="Shakil Ansari">
-  <h1>Shakil Ansari</h1>
-  <p>Entry-Level Data Scientist • Mechatronics & Botany background • Python, NLP, Time Series • Kaggle & Tableau Enthusiast</p>
+  <div class="content">
+    <img src="assets/shakilansari.jpg" alt="Shakil Ansari">
+    <h1>Shakil Ansari</h1>
+    <p>Entry-Level Data Scientist | Mechatronics & Botany | NLP · Time Series · Forecasting · Deep Learning</p>
+  </div>
 </header>
 
-<section id="about">
+<section>
   <h2>About Me</h2>
-  <p>I blend engineering precision and biological insight into data science. Skilled in Python, SQL, scikit‑learn, PyTorch, Tableau, and Kaggle. Passionate about translating data into impact through NLP, forecasting, clustering, and recommendation systems.</p>
+  <div class="card">
+    <p>I’m a curious data science practitioner with a multidisciplinary background in Mechatronics and Botany. I enjoy solving problems with machine learning, NLP, and time series forecasting. Tools I use include Python, SQL, scikit-learn, Keras, Tableau, and Power BI.</p>
+  </div>
 </section>
 
-<section id="experience">
+<section>
   <h2>Experience</h2>
-  <p><strong>Educator</strong>, Vidhyanjali Rising Point, Delhi (Apr 2021 – Present)<br>
-  Designed CBSE-aligned Science, Math, and English instruction.</p>
-
-  <p><strong>Research Trainee</strong>, Abyom SpaceTech & Defense Pvt. Ltd. (Jul 2020 – Sep 2020)<br>
-  Conducted planetary data analysis related to material diversity.</p>
-
-  <p><strong>Engineering Intern</strong>, Northern Indian Railways (Dec 2019 – Jan 2020)<br>
-  Developed an Axle Box Temperature Sensor prototype.</p>
+  <div class="card">
+    <p><strong>Educator</strong>, Vidhyanjali Rising Point, Delhi – Delivered science & math lessons aligned with CBSE curriculum.</p>
+    <p><strong>Research Trainee</strong>, Abyom SpaceTech – Researched planetary material diversity using NASA data.</p>
+    <p><strong>Engineer Intern</strong>, Northern Indian Railways – Developed Axle Box Temperature Sensor for loco maintenance.</p>
+  </div>
 </section>
 
-<section id="projects">
+<section>
   <h2>Projects</h2>
   <div class="grid">
     <div class="card">
       <img src="assets/project1.png" alt="Movie Recommendation">
-      <h3>Movie Recommendation System</h3>
-      <p>Collaborative filtering model built on IMDB using Python.</p>
+      <h3>Movie Recommendation</h3>
+      <p>Collaborative filtering model using IMDb ratings dataset.</p>
     </div>
     <div class="card">
       <img src="assets/project2.png" alt="Lyrics Generator">
-      <h3>Lyrics Generator (RNN‑LSTM)</h3>
-      <p>Character-level LSTM generating song lyrics.</p>
+      <h3>Lyrics Generator (LSTM)</h3>
+      <p>RNN-LSTM trained on lyrics to generate creative text sequences.</p>
     </div>
-    <!-- Add more cards as needed -->
+    <div class="card">
+      <img src="assets/project3.png" alt="Stock Forecast">
+      <h3>Stock Price Forecasting</h3>
+      <p>ARIMA/SARIMA models trained on Yahoo finance time series.</p>
+    </div>
   </div>
 </section>
 
-<section id="contact">
+<section>
   <h2>Contact & Links</h2>
-  <p>📧 ansarishakeel006@gmail.com</p>
-  <p>🔗 <a href="https://github.com/Ansareze">GitHub</a> | <a href="https://linkedin.com/in/shakilansari006">LinkedIn</a> | <a href="https://kaggle.com/shakilansari">Kaggle</a> | <a href="https://public.tableau.com/profile/shakil.ansari">Tableau</a></p>
-  <p>📄 <a href="assets/ShakilAnsari_Resume.pdf" download>Download Resume (PDF)</a></p>
+  <div class="card">
+    <p>📧 ansarishakeel006@gmail.com</p>
+    <p>🌐 
+      <a href="https://github.com/Ansareze">GitHub</a> • 
+      <a href="https://linkedin.com/in/shakilansari006">LinkedIn</a> • 
+      <a href="https://kaggle.com/shakilansari">Kaggle</a> • 
+      <a href="https://public.tableau.com/profile/shakil.ansari">Tableau</a>
+    </p>
+    <p>📄 <a href="assets/ShakilAnsari_Resume.pdf" download>Download Resume (PDF)</a></p>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Shakil Ansari • All Rights Reserved
+  &copy; 2025 Shakil Ansari. All rights reserved.
 </footer>
 
 </body>
