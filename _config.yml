@@ -1,8 +1,24 @@
-theme: jekyll-theme-minimal
-author_name: "Shakil Ansari"
-resume_url: "/assets/ShakilAnsari_Resume.pdf"
+# ⚙️ Enable the Minimal theme via remote_theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# 🧭 Basic site info
+title: "Shakil Ansari"
 description: "Entry-level Data Science Practitioner | NLP · Time Series · ML"
 url: "https://ansareze.github.io"
+
+# ✅ Media and external links
+resume_url: "/assets/ShakilAnsari_Resume.pdf"
+logo: "/assets/shakilansari.jpg"   # optional logo/avatar
+show_downloads: true
+
+# 🌐 Social and profile links
 github_username: "Ansareze"
 kaggle_username: "shakilansari"
 tableau_url: "https://public.tableau.com/profile/shakil.ansari"
+
+# 🧰 Analytics / Comments (optional config)
+google_analytics: ""
+disqus:
+  shortname: ""
