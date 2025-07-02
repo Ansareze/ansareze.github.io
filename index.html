@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shakil Ansari | Data Scientist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #0ea5e9;
+      --accent: #059669;
+      --bg: #f8fafc;
+      --card-bg: #fff;
+      --shadow: 0 4px 24px rgba(44,62,80,0.08);
+      --radius: 16px;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --nav-bg: #fff;
+      --nav-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      --toggle-bg: #e0e7ef;
+      --toggle-icon: #2563eb;
+    }
+    html[data-theme='dark'] {
+      --primary: #60a5fa;
+      --secondary: #0ea5e9;
+      --accent: #34d399;
+      --bg: #181a20;
+      --card-bg: #23262f;
+      --shadow: 0 4px 24px rgba(0,0,0,0.18);
+      --text: #e5e7eb;
+      --text-light: #a1a1aa;
+      --nav-bg: #23262f;
+      --nav-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      --toggle-bg: #23262f;
+      --toggle-icon: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Poppins', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    nav {
+      width: 100%;
+      background: var(--nav-bg);
+      color: var(--primary);
+      padding: 0 40px;
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      height: 64px;
+      box-shadow: var(--nav-shadow);
+    }
+    nav .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      flex: 1;
+      color: var(--primary);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      font-size: 1.05rem;
+    }
+    nav ul li a:hover {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+    }
+    .toggle-switch {
+      margin-left: 24px;
+      background: var(--toggle-bg);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    }
+    .toggle-switch:hover {
+      background: var(--primary);
+    }
+    .toggle-switch i {
+      color: var(--toggle-icon);
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .hero {
+      background: linear-gradient(120deg, #e0f2fe 60%, #f8fafc 100%);
+      color: var(--text);
+      padding: 120px 0 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    html[data-theme='dark'] .hero {
+      background: linear-gradient(120deg, #23262f 60%, #181a20 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      animation: fadeIn 1.2s;
+    }
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      box-shadow: 0 4px 24px rgba(44,62,80,0.13);
+      margin-bottom: 10px;
+      object-fit: cover;
+      background: #e0e7ef;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 400;
+      opacity: 0.95;
+      color: var(--text-light);
+    }
+    .hero .tags {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .hero .tag {
+      background: #e0f2fe;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--primary);
+      border: 1px solid #bae6fd;
+      transition: background 0.2s;
+    }
+    .hero .tag:hover {
+      background: #bae6fd;
+    }
+    html[data-theme='dark'] .hero .tag {
+      background: #23262f;
+      color: #60a5fa;
+      border: 1px solid #334155;
+    }
+    main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    section {
+      max-width: 1100px;
+      margin: 0 auto 0 auto;
+      padding: 0;
+      position: relative;
+      z-index: 2;
+    }
+    h2 {
+      font-size: 2rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 14px;
+      margin-bottom: 32px;
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-top: 80px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s;
+      color: var(--text-light);
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.025);
+      box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    }
+    .card .icon {
+      font-size: 2.1rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      margin-bottom: 18px;
+      background: #e0e7ef;
+      border-bottom: 2px solid #bae6fd;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+      display: block;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+    }
+    .skill {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      border-radius: 18px;
+      padding: 7px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      margin-bottom: 6px;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .contact-links a {
+      color: var(--primary);
+      background: #e0f2fe;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      border: 1.5px solid #bae6fd;
+    }
+    .contact-links a:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 18px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: 24px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.09);
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+    }
+    .resume-btn:hover {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      transform: translateY(-2px) scale(1.04);
+      color: #fff;
+    }
+    /* Blog Section */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .blog-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 24px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.18s, box-shadow 0.18s;
+      animation: fadeInUp 1s;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px) scale(1.025);
+      box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+    }
+    .blog-card .blog-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 4px 0;
+    }
+    .blog-card .blog-date {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+    .blog-card .blog-summary {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+    .blog-card .blog-link {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+      align-self: flex-start;
+    }
+    .blog-card .blog-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    footer {
+      background: #f1f5f9;
+      color: #64748b;
+      text-align: center;
+      padding: 28px 10px 18px;
+      font-size: 1rem;
+      margin-top: 60px;
+      letter-spacing: 1px;
+      border-top: 1.5px solid #e0e7ef;
+    }
+    html[data-theme='dark'] footer {
+      background: #23262f;
+      color: #a1a1aa;
+      border-top: 1.5px solid #23262f;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: none; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 0 12px; }
+      .hero { padding: 90px 0 60px 0; }
+      section { padding: 0 8px; }
+      h2 { font-size: 1.3rem; }
+      .card { padding: 18px 10px; }
+      .project-img { height: 120px; }
+      .grid, .blog-grid { gap: 18px; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.5rem; }
+      .hero img { width: 90px; height: 90px; }
+      .resume-btn { font-size: 0.98rem; padding: 8px 16px; }
+      .project-img { height: 80px; }
+      nav ul { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Shakil Ansari</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="blog.html" target="_blank">Blog</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="toggle-switch" id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <img src="assets/shakilansari.jpeg" alt="Shakil Ansari">
+    <h1>Shakil Ansari</h1>
+    <p>Entry-Level Data Scientist | Mechatronics & Botany<br>NLP · Time Series · Forecasting · Deep Learning</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Keras</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Power BI</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <span class="icon"><i class="fas fa-user-graduate"></i></span>
+      <p>
+        I’m a data science practitioner with a multidisciplinary foundation in <strong>Mechatronics Engineering</strong> and academic training in <strong>Life Sciences (Botany)</strong>. This unique blend allows me to approach problems at the intersection of engineering, biology, and computation with a systems-thinking mindset.
+      </p>
+  
+      <p>
+        My journey into data science has been fueled by deep curiosity and a drive to build practical, impactful solutions. I’ve built end-to-end projects in <strong>machine learning</strong>, <strong>natural language processing</strong>, and <strong>time series forecasting</strong> — including a <em>fake news detector using LSTM & GloVe embeddings</em>, an <em>RNN-based lyrics generator</em>, and a <em>stock price predictor using ARIMA/SARIMA</em>. I enjoy exploring both statistical rigor and neural architectures to solve real-world problems.
+      </p>
+  
+      <p>
+        My background in education and research has sharpened my ability to communicate complex concepts clearly — whether it’s teaching high school mathematics and physics or analyzing planetary data during my time as a research trainee at <em>Abyom SpaceTech</em>. These experiences have helped me cultivate strong analytical thinking, pattern recognition, and an instinct for structure and clarity in data.
+      </p>
+  
+      <p>
+        I’m proficient in tools like <strong>Python</strong>, <strong>SQL</strong>, <strong>scikit-learn</strong>, <strong>Keras</strong>, <strong>Pandas</strong>, <strong>Tableau</strong>, and <strong>Power BI</strong>, and regularly work with Git and Jupyter notebooks. I’m currently expanding my knowledge through formal training at the <strong>Boston Institute of Analytics</strong> and the <strong>IBM Data Science Professional Certificate</strong>.
+      </p>
+  
+      <p>
+        I believe in lifelong learning, cross-disciplinary thinking, and building systems that balance precision with creativity. Whether I’m writing code, training a model, designing a dashboard, or mentoring a student, I approach every task with intensity and curiosity. In the long term, I aim to apply AI to solve challenges in education, automation, and ecological sustainability.
+      </p>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img class="project-img" src="assets/MovieRecommendation.png" alt="Movie Recommendation">
+        <span class="icon"><i class="fas fa-film"></i></span>
+        <strong style="color:var(--primary);font-size:1.15em;">Movie Recommendation</strong>
+        <p>Collaborative filtering model using IMDb ratings dataset to recommend movies tailored to user preferences.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="assets/Lyrics_Generator.png" alt="Lyrics Generator">
+        <span class="icon"><i class="fas fa-music"></i></span>
+        <strong style="color:var(--primary);font-size:1.15em;">Lyrics Generator (LSTM)</strong>
+        <p>RNN-LSTM trained on lyrics to generate creative text sequences, exploring the intersection of AI and art.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="assets/fake_news_detector.png" alt="Fake News Detection">
+        <span class="icon"><i class="fas fa-newspaper"></i></span>
+        <strong style="color:var(--primary);font-size:1.15em;">Fake News Detection (GloVe + LSTM)</strong>
+        <p>Developed a deep learning model using GloVe word embeddings and LSTM networks to classify news articles as fake or true. Trained on a real-world news dataset, achieving high accuracy in detecting misinformation.</p>
+        <!-- Optional: <a class="blog-link" href="LINK_TO_CODE_OR_BLOG" target="_blank">View Code</a> -->
+      </div>
+      <div class="card">
+        <img class="project-img" src="assets/yahoo_stock_price.png" alt="Stock Price Forecasting">
+        <img class="project-img" src="assets/yahoo_stock_price2.png" alt="Stock Price Forecasting">
+        <span class="icon"><i class="fas fa-chart-line"></i></span>
+        <strong style="color:var(--primary);font-size:1.15em;">Stock Price Forecasting</strong>
+        <p>ARIMA/SARIMA models trained on Yahoo finance time series for accurate stock price prediction and analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <div class="skills">
+        <span class="skill"><i class="fab fa-python"></i> Python</span>
+        <span class="skill"><i class="fas fa-database"></i> SQL</span>
+        <span class="skill"><i class="fas fa-robot"></i> Machine Learning</span>
+        <span class="skill"><i class="fas fa-brain"></i> Deep Learning</span>
+        <span class="skill"><i class="fas fa-language"></i> NLP</span>
+        <span class="skill"><i class="fas fa-chart-bar"></i> Data Visualization</span>
+        <span class="skill"><i class="fas fa-project-diagram"></i> Time Series</span>
+        <span class="skill"><i class="fas fa-table"></i> Tableau</span>
+        <span class="skill"><i class="fas fa-bolt"></i> Power BI</span>
+        <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
+      </div>
+    </div>
+  </section>
+  
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+      <strong>Educator</strong><br>
+      <span style="color:var(--primary);font-size:0.98em;">Vidhyanjali Rising Point, Delhi</span>
+      <p>Delivered science & math lessons aligned with CBSE curriculum, fostering curiosity and analytical thinking in students.</p>
+    </div>
+    <div class="card">
+      <span class="icon"><i class="fas fa-rocket"></i></span>
+      <strong>Research Trainee</strong><br>
+      <span style="color:var(--primary);font-size:0.98em;">Abyom SpaceTech</span>
+      <p>Researched planetary material diversity using NASA data, contributing to innovative space research projects.</p>
+    </div>
+    <div class="card">
+      <span class="icon"><i class="fas fa-tools"></i></span>
+      <strong>Engineer Intern</strong><br>
+      <span style="color:var(--primary);font-size:0.98em;">Northern Indian Railways</span>
+      <p>Developed Axle Box Temperature Sensor for loco maintenance, improving safety and reliability in railway operations.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid">
+
+    <div class="card">
+      <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+      <strong>B.Tech – Mechatronics Engineering</strong><br>
+      <span style="color:var(--primary);font-size:0.95em;">Delhi Institute of Tool Engineering, India | GPA: 8.0/10.0 | 2024 – 2024</span>
+      <p>Interdisciplinary foundation in mechanical systems, electronics, computer science, and automation.<br>
+      Final-year project: <em>Kinetic Tiles for Energy Harvesting</em>.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon"><i class="fas fa-leaf"></i></span>
+      <strong>B.Sc – Life Sciences (Botany)</strong><br>
+      <span style="color:var(--primary);font-size:0.95em;">Indira Gandhi National Open University | GPA: 6.0/10.0 | 2018 – 2021</span>
+      <p>Coursework included <em>Ecology, Genetics, Cytology, Plant Physiology</em>.  
+      Built a strong foundation in biological systems and environmental interaction.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon"><i class="fas fa-certificate"></i></span>
+      <strong>Certification – Data Science & AI</strong><br>
+      <span style="color:var(--primary);font-size:0.95em;">Boston Institute of Analytics | 2024</span>
+      <p>Weekend training program with hands-on projects in machine learning, NLP, and forecasting using Python & Tableau.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon"><i class="fas fa-certificate"></i></span>
+      <strong>IBM Data Science Professional Certificate</strong><br>
+      <span style="color:var(--primary);font-size:0.95em;">Coursera | 2025</span>
+      <p>Completed modules on Python, SQL, data analysis, visualization, machine learning, and project methodology.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <div class="blog-grid">
+    <div class="blog-card" onclick="window.open('blog-post-1.html', '_blank')" style="cursor:pointer;">
+      <div class="blog-title">How I Built a Movie Recommendation System</div>
+      <div class="blog-date">May 2025</div>
+      <div class="blog-summary">A step-by-step guide to building a collaborative filtering recommendation engine using Python and real-world IMDb data. Includes code, evaluation, and deployment tips.</div>
+      <a class="blog-link" href="blog-post-1.html" target="_blank">Read more</a>
+    </div>
+    <div class="blog-card" onclick="window.open('blog-post-2.html', '_blank')" style="cursor:pointer;">
+      <div class="blog-title">Getting Started with Time Series Forecasting</div>
+      <div class="blog-date">April 2025</div>
+      <div class="blog-summary">An introduction to time series analysis and forecasting with ARIMA/SARIMA models. Learn how to prepare data, select models, and interpret results.</div>
+      <a class="blog-link" href="blog-post-2.html" target="_blank">Read more</a>
+    </div>
+    <div class="blog-card" onclick="window.open('blog-post-3.html', '_blank')" style="cursor:pointer;">
+      <div class="blog-title">NLP for Beginners: Text Generation with LSTM</div>
+      <div class="blog-date">March 2025</div>
+      <div class="blog-summary">Explore the basics of natural language processing and how to generate creative text using LSTM neural networks. Includes code snippets and practical advice.</div>
+      <a class="blog-link" href="blog-post-3.html" target="_blank">Read more</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact & Links</h2>
+  <div class="card">
+    <div class="contact-links">
+      <a href="mailto:ansarishakeel006@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Ansareze" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/shakilansari006" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.kaggle.com/shakilansari006" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+      <a href="https://public.tableau.com/profile/shakil.ansari" target="_blank" title="Tableau"><i class="fas fa-table"></i></a>
+      <a href="https://www.medium.com" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+      <a href="https://www.youtube.com/profile/shakil.ansari" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+
+    </div>
+    <a class="resume-btn" href="assets/Shakil_Ansari_Resume.pdf" download><i class="fas fa-download"></i> Download Resume (PDF)</a>
+    <a class="resume-btn" href="assets/Shakil_Ansari_CoverLetter.pdf" download><i class="fas fa-download"></i> Download Cover Letter (PDF)</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  &copy; 2025 Shakil Ansari. All rights reserved.
+</footer>
+
+<script>
+// Dark mode toggle
+const toggleBtn = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const icon = toggleBtn.querySelector('i');
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  if (theme === 'dark') {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+  localStorage.setItem('theme', theme);
+}
+
+toggleBtn.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  setTheme(current);
+});
+
+// On load, set theme to light by default, even if system prefers dark
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else {
+    setTheme('light');
+  }
+})();
+</script>
+
+</body>
+</html>
