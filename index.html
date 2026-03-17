@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shakil Ansari | Data Scientist Portfolio</title>
-  <meta name="description" content="Shakil Ansari — Data Scientist specializing in NLP, Time Series Forecasting, Deep Learning. Explore projects, skills, and experience.">
+  <title>Shakil Ansari — Data Scientist</title>
+  <meta name="description" content="Shakil Ansari — Data Scientist specializing in NLP, Deep Learning, Time Series Forecasting. Explore projects, skills, and experience.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -13,245 +13,294 @@
 <div class="scroll-progress"></div>
 
 <nav>
-  <div class="logo">Shakil Ansari</div>
+  <div class="logo">shakil<em>.</em></div>
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="blog.html" target="_blank">Blog</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#blog">Blog</a></li>
   </ul>
-  <button class="toggle-switch" id="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fas fa-moon"></i>
-  </button>
+  <a class="nav-cta" href="#contact">Get in touch</a>
   <button class="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
+<!-- ════════════ HERO ════════════ -->
 <section class="hero" id="home">
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-  <div class="hero-glow hero-glow-3"></div>
-  <canvas class="hero-bg-canvas" id="hero-canvas"></canvas>
-  <div class="hero-content">
-    <div class="reveal-item profile-ring">
-      <img class="profile-img" src="assets/shakilansari.jpeg" alt="Shakil Ansari">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-label">Data Scientist</div>
+      <h1>Building intelligence<br>from <span class="accent">data</span>.</h1>
+      <p class="subtitle">
+        Mechatronics Engineer turned Data Scientist — specializing in
+        <span class="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">Keras</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Power BI</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-primary" href="assets/Shakil_Ansari_Resume.pdf" download>
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <a class="btn-outline" href="#projects">View Work <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
-    <h1 class="reveal-item">Shakil Ansari</h1>
-    <p class="subtitle reveal-item">
-      Entry-Level Data Scientist · <span class="typed-text"></span><span class="cursor-blink">|</span>
-    </p>
-    <div class="tags reveal-item">
-      <span class="tag">Python</span>
-      <span class="tag">SQL</span>
-      <span class="tag">scikit-learn</span>
-      <span class="tag">Keras</span>
-      <span class="tag">Tableau</span>
-      <span class="tag">Power BI</span>
-    </div>
-    <a class="resume-btn reveal-item" href="assets/Shakil_Ansari_Resume.pdf" download>
-      <i class="fas fa-download"></i> Download Resume
-    </a>
-  </div>
-</section>
-
-<main>
-
-<section id="about">
-  <h2><span>About Me</span></h2>
-  <div class="card sr">
-    <span class="icon"><i class="fas fa-user-graduate"></i></span>
-    <p>I'm a data science practitioner with a multidisciplinary foundation in <strong>Mechatronics Engineering</strong> and academic training in <strong>Life Sciences (Botany)</strong>. This unique blend allows me to approach problems at the intersection of engineering, biology, and computation with a systems-thinking mindset.</p>
-    <p>My journey into data science has been fueled by deep curiosity and a drive to build practical, impactful solutions. I've built end-to-end projects in <strong>machine learning</strong>, <strong>natural language processing</strong>, and <strong>time series forecasting</strong> — including a <em>fake news detector using LSTM &amp; GloVe embeddings</em>, an <em>RNN-based lyrics generator</em>, and a <em>stock price predictor using ARIMA/SARIMA</em>.</p>
-    <p>My background in education and research has sharpened my ability to communicate complex concepts clearly — whether it's teaching high school mathematics and physics or analyzing planetary data during my time as a research trainee at <em>Abyom SpaceTech</em>.</p>
-    <p>I'm proficient in tools like <strong>Python</strong>, <strong>SQL</strong>, <strong>scikit-learn</strong>, <strong>Keras</strong>, <strong>Pandas</strong>, <strong>Tableau</strong>, and <strong>Power BI</strong>, and regularly work with Git and Jupyter notebooks. I'm currently expanding my knowledge through formal training at the <strong>Boston Institute of Analytics</strong> and the <strong>IBM Data Science Professional Certificate</strong>.</p>
-    <p>I believe in lifelong learning, cross-disciplinary thinking, and building systems that balance precision with creativity. In the long term, I aim to apply AI to solve challenges in education, automation, and ecological sustainability.</p>
-  </div>
-</section>
-
-<section id="projects">
-  <h2><span>Projects</span></h2>
-  <div class="grid">
-    <div class="card sr">
-      <img class="project-img" src="assets/dialogue_summarizer1.png" alt="Abstractive Dialogue Summarization">
-      <span class="icon"><i class="fas fa-comments"></i></span>
-      <strong class="project-title">Abstractive Dialogue Summarization</strong>
-      <p>Fine-tuned FLAN-T5 on DialogSum to generate abstractive summaries from conversational text using prompt-based modeling.</p>
-    </div>
-    <div class="card sr sr-delay-1">
-      <img class="project-img" src="assets/gpt2_indian_food_recipe.png" alt="Indian Recipe Generation">
-      <span class="icon"><i class="fas fa-utensils"></i></span>
-      <strong class="project-title">Domain-Specific NLP: Indian Recipe Generation</strong>
-      <p>Trained a language model to generate Indian food recipes from natural queries using domain-specific prompt engineering.</p>
-    </div>
-    <div class="card sr sr-delay-2">
-      <img class="project-img" src="assets/MovieRecommendation.png" alt="Movie Recommendation">
-      <span class="icon"><i class="fas fa-film"></i></span>
-      <strong class="project-title">Movie Recommendation System</strong>
-      <p>Collaborative filtering model using IMDb ratings dataset to recommend movies tailored to user preferences.</p>
-    </div>
-    <div class="card sr">
-      <img class="project-img" src="assets/stellar_object_classifier.png" alt="Stellar Object Classifier">
-      <span class="icon"><i class="fas fa-satellite"></i></span>
-      <strong class="project-title">Stellar Object Classifier</strong>
-      <p>Classified celestial objects using supervised ML models and neural networks on astronomical datasets.</p>
-    </div>
-    <div class="card sr sr-delay-1">
-      <img class="project-img" src="assets/Lyrics_Generator.png" alt="Lyrics Generator">
-      <span class="icon"><i class="fas fa-music"></i></span>
-      <strong class="project-title">Lyrics Generator (LSTM)</strong>
-      <p>RNN-LSTM trained on lyrics to generate creative text sequences, exploring the intersection of AI and art.</p>
-    </div>
-    <div class="card sr sr-delay-2">
-      <img class="project-img" src="assets/fake_news_detector.png" alt="Fake News Detection">
-      <span class="icon"><i class="fas fa-newspaper"></i></span>
-      <strong class="project-title">Fake News Detection (GloVe + LSTM)</strong>
-      <p>Deep learning model using GloVe word embeddings and LSTM networks to classify news articles as fake or true.</p>
-    </div>
-    <div class="card sr">
-      <img class="project-img" src="assets/yahoo_stock_price.png" alt="Stock Price Forecasting">
-      <span class="icon"><i class="fas fa-chart-line"></i></span>
-      <strong class="project-title">Stock Price Forecasting</strong>
-      <p>ARIMA/SARIMA models trained on Yahoo finance time series for accurate stock price prediction and analysis.</p>
+    <div class="hero-image">
+      <div class="glow"></div>
+      <div class="frame"></div>
+      <img class="portrait" src="assets/shakilansari.jpeg" alt="Shakil Ansari">
     </div>
   </div>
 </section>
 
-<section id="skills">
-  <h2><span>Skills</span></h2>
-  <div class="card sr">
-    <div class="skills">
-      <span class="skill"><i class="fab fa-python"></i> Python</span>
-      <span class="skill"><i class="fas fa-database"></i> SQL</span>
-      <span class="skill"><i class="fas fa-robot"></i> Machine Learning</span>
-      <span class="skill"><i class="fas fa-brain"></i> Deep Learning</span>
-      <span class="skill"><i class="fas fa-language"></i> NLP</span>
-      <span class="skill"><i class="fas fa-chart-bar"></i> Data Visualization</span>
-      <span class="skill"><i class="fas fa-project-diagram"></i> Time Series</span>
-      <span class="skill"><i class="fas fa-table"></i> Tableau</span>
-      <span class="skill"><i class="fas fa-bolt"></i> Power BI</span>
-      <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
+<!-- ════════════ ABOUT ════════════ -->
+<section id="about" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">01</span>
+    <h2 class="section-title">About</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-content">
+    <div class="sr">
+      <p>I'm a data science practitioner with a multidisciplinary foundation in <strong>Mechatronics Engineering</strong> and academic training in <strong>Life Sciences (Botany)</strong>. This unique blend allows me to approach problems at the intersection of engineering, biology, and computation with a systems-thinking mindset.</p>
+      <br>
+      <p>My journey into data science has been fueled by deep curiosity and a drive to build practical, impactful solutions. I've built end-to-end projects in <strong>machine learning</strong>, <strong>natural language processing</strong>, and <strong>time series forecasting</strong> — including a <em>fake news detector</em>, an <em>RNN-based lyrics generator</em>, and a <em>stock price predictor</em>.</p>
+    </div>
+    <div class="sr sr-d2">
+      <p>My background in education and research has sharpened my ability to communicate complex concepts clearly — whether teaching high school mathematics or analyzing planetary data at <em>Abyom SpaceTech</em>.</p>
+      <br>
+      <p>I'm proficient in <strong>Python</strong>, <strong>SQL</strong>, <strong>scikit-learn</strong>, <strong>Keras</strong>, <strong>Pandas</strong>, <strong>Tableau</strong>, and <strong>Power BI</strong>. Currently expanding through training at the <strong>Boston Institute of Analytics</strong> and the <strong>IBM Data Science Professional Certificate</strong>.</p>
+      <br>
+      <p>I believe in lifelong learning, cross-disciplinary thinking, and building systems that balance precision with creativity. Long term, I aim to apply AI to challenges in education, automation, and ecological sustainability.</p>
     </div>
   </div>
 </section>
 
-<section id="experience">
-  <h2><span>Experience</span></h2>
+<!-- ════════════ PROJECTS ════════════ -->
+<section id="projects" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="bento">
+    <div class="bento-card wide sr">
+      <img class="card-img" src="assets/dialogue_summarizer1.png" alt="Dialogue Summarization">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-comments"></i></span>
+        <div class="card-title">Abstractive Dialogue Summarization</div>
+        <div class="card-desc">Fine-tuned FLAN-T5 on DialogSum to generate abstractive summaries from conversational text using prompt-based modeling.</div>
+      </div>
+    </div>
+    <div class="bento-card sr sr-d1">
+      <img class="card-img" src="assets/gpt2_indian_food_recipe.png" alt="Recipe Generation">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-utensils"></i></span>
+        <div class="card-title">Indian Recipe Generation</div>
+        <div class="card-desc">Trained a language model to generate Indian food recipes from natural queries using domain-specific prompt engineering.</div>
+      </div>
+    </div>
+    <div class="bento-card sr sr-d2">
+      <img class="card-img" src="assets/MovieRecommendation.png" alt="Movie Recommendation">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-film"></i></span>
+        <div class="card-title">Movie Recommendation</div>
+        <div class="card-desc">Collaborative filtering model using IMDb ratings to recommend movies tailored to user preferences.</div>
+      </div>
+    </div>
+    <div class="bento-card sr sr-d3">
+      <img class="card-img" src="assets/stellar_object_classifier.png" alt="Stellar Object Classifier">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-satellite"></i></span>
+        <div class="card-title">Stellar Object Classifier</div>
+        <div class="card-desc">Classified celestial objects using supervised ML models and neural networks on astronomical datasets.</div>
+      </div>
+    </div>
+    <div class="bento-card wide sr sr-d4">
+      <img class="card-img" src="assets/yahoo_stock_price.png" alt="Stock Price Forecasting">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-chart-line"></i></span>
+        <div class="card-title">Stock Price Forecasting</div>
+        <div class="card-desc">ARIMA/SARIMA models trained on Yahoo finance time series for accurate stock price prediction and analysis.</div>
+      </div>
+    </div>
+    <div class="bento-card sr sr-d1">
+      <img class="card-img" src="assets/Lyrics_Generator.png" alt="Lyrics Generator">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-music"></i></span>
+        <div class="card-title">Lyrics Generator (LSTM)</div>
+        <div class="card-desc">RNN-LSTM trained on lyrics to generate creative text sequences — AI meets art.</div>
+      </div>
+    </div>
+    <div class="bento-card sr sr-d2">
+      <img class="card-img" src="assets/fake_news_detector.png" alt="Fake News Detection">
+      <div class="card-body">
+        <span class="card-icon"><i class="fas fa-newspaper"></i></span>
+        <div class="card-title">Fake News Detection</div>
+        <div class="card-desc">Deep learning model using GloVe embeddings and LSTM to classify news articles as fake or true.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SKILLS ════════════ -->
+<section id="skills" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-wrap">
+    <div class="skill-chip sr"><i class="fab fa-python"></i> Python</div>
+    <div class="skill-chip sr sr-d1"><i class="fas fa-database"></i> SQL</div>
+    <div class="skill-chip sr sr-d2"><i class="fas fa-robot"></i> Machine Learning</div>
+    <div class="skill-chip sr sr-d3"><i class="fas fa-brain"></i> Deep Learning</div>
+    <div class="skill-chip sr sr-d4"><i class="fas fa-language"></i> NLP</div>
+    <div class="skill-chip sr sr-d5"><i class="fas fa-chart-bar"></i> Data Visualization</div>
+    <div class="skill-chip sr sr-d6"><i class="fas fa-project-diagram"></i> Time Series</div>
+    <div class="skill-chip sr sr-d1"><i class="fas fa-table"></i> Tableau</div>
+    <div class="skill-chip sr sr-d2"><i class="fas fa-bolt"></i> Power BI</div>
+    <div class="skill-chip sr sr-d3"><i class="fab fa-git-alt"></i> Git</div>
+  </div>
+</section>
+
+<!-- ════════════ EXPERIENCE ════════════ -->
+<section id="experience" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
   <div class="timeline">
     <div class="timeline-item sr">
-      <div class="card">
-        <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
-        <strong>Educator</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Vidhyanjali Rising Point, Delhi</span>
-        <p>Delivered science &amp; math lessons aligned with CBSE curriculum, fostering curiosity and analytical thinking in students.</p>
-      </div>
+      <div class="tl-role">Educator</div>
+      <div class="tl-company">Vidhyanjali Rising Point, Delhi</div>
+      <div class="tl-desc">Delivered science & math lessons aligned with CBSE curriculum, fostering curiosity and analytical thinking in students.</div>
     </div>
-    <div class="timeline-item sr sr-delay-1">
-      <div class="card">
-        <span class="icon"><i class="fas fa-rocket"></i></span>
-        <strong>Research Trainee</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Abyom SpaceTech</span>
-        <p>Researched planetary material diversity using NASA data, contributing to innovative space research projects.</p>
-      </div>
+    <div class="timeline-item sr sr-d1">
+      <div class="tl-role">Research Trainee</div>
+      <div class="tl-company">Abyom SpaceTech</div>
+      <div class="tl-desc">Researched planetary material diversity using NASA data, contributing to innovative space research projects.</div>
     </div>
-    <div class="timeline-item sr sr-delay-2">
-      <div class="card">
-        <span class="icon"><i class="fas fa-tools"></i></span>
-        <strong>Engineer Intern</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Northern Indian Railways</span>
-        <p>Developed Axle Box Temperature Sensor for loco maintenance, improving safety and reliability in railway operations.</p>
-      </div>
+    <div class="timeline-item sr sr-d2">
+      <div class="tl-role">Engineer Intern</div>
+      <div class="tl-company">Northern Indian Railways</div>
+      <div class="tl-desc">Developed Axle Box Temperature Sensor for loco maintenance, improving safety and reliability in railway operations.</div>
     </div>
   </div>
 </section>
 
-<section id="education">
-  <h2><span>Education</span></h2>
+<!-- ════════════ EDUCATION ════════════ -->
+<section id="education" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+  </div>
   <div class="timeline">
     <div class="timeline-item sr">
-      <div class="card">
-        <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-        <strong>B.Tech – Mechatronics Engineering</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Delhi Institute of Tool Engineering | GPA: 8.0/10.0 | 2024</span>
-        <p>Interdisciplinary foundation in mechanical systems, electronics, computer science, and automation.<br>Final-year project: <em>Kinetic Tiles for Energy Harvesting</em>.</p>
-      </div>
+      <div class="tl-role">B.Tech — Mechatronics Engineering</div>
+      <div class="tl-company">Delhi Institute of Tool Engineering · GPA 8.0/10.0 · 2024</div>
+      <div class="tl-desc">Interdisciplinary foundation in mechanical systems, electronics, CS, and automation. Final project: Kinetic Tiles for Energy Harvesting.</div>
     </div>
-    <div class="timeline-item sr sr-delay-1">
-      <div class="card">
-        <span class="icon"><i class="fas fa-leaf"></i></span>
-        <strong>B.Sc – Life Sciences (Botany)</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Indira Gandhi National Open University | GPA: 6.0/10.0 | 2018 – 2021</span>
-        <p>Coursework included <em>Ecology, Genetics, Cytology, Plant Physiology</em>. Built a strong foundation in biological systems.</p>
-      </div>
+    <div class="timeline-item sr sr-d1">
+      <div class="tl-role">B.Sc — Life Sciences (Botany)</div>
+      <div class="tl-company">IGNOU · GPA 6.0/10.0 · 2018–2021</div>
+      <div class="tl-desc">Coursework in Ecology, Genetics, Cytology, Plant Physiology. Strong foundation in biological systems.</div>
     </div>
-    <div class="timeline-item sr sr-delay-2">
-      <div class="card">
-        <span class="icon"><i class="fas fa-certificate"></i></span>
-        <strong>Certification – Data Science &amp; AI</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Boston Institute of Analytics | 2024</span>
-        <p>Weekend training program with hands-on projects in machine learning, NLP, and forecasting using Python &amp; Tableau.</p>
-      </div>
+    <div class="timeline-item sr sr-d2">
+      <div class="tl-role">Data Science & AI Certification</div>
+      <div class="tl-company">Boston Institute of Analytics · 2024</div>
+      <div class="tl-desc">Hands-on projects in machine learning, NLP, and forecasting using Python & Tableau.</div>
     </div>
-    <div class="timeline-item sr sr-delay-3">
-      <div class="card">
-        <span class="icon"><i class="fas fa-certificate"></i></span>
-        <strong>IBM Data Science Professional Certificate</strong><br>
-        <span style="color:var(--primary);font-size:0.95em;">Coursera | 2025</span>
-        <p>Completed modules on Python, SQL, data analysis, visualization, machine learning, and project methodology.</p>
-      </div>
+    <div class="timeline-item sr sr-d3">
+      <div class="tl-role">IBM Data Science Professional Certificate</div>
+      <div class="tl-company">Coursera · 2025</div>
+      <div class="tl-desc">Python, SQL, data analysis, visualization, machine learning, and project methodology.</div>
     </div>
   </div>
 </section>
 
-<section id="blog">
-  <h2><span>Blog</span></h2>
+<!-- ════════════ BLOG ════════════ -->
+<section id="blog" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Blog</h2>
+    <div class="section-line"></div>
+  </div>
   <div class="blog-grid">
-    <div class="blog-card sr" onclick="window.open('blog-post-1.html', '_blank')">
-      <div class="blog-title">How I Built a Movie Recommendation System</div>
+    <div class="blog-card sr" onclick="window.open('blog-post-1.html','_blank')">
       <div class="blog-date">May 2025</div>
-      <div class="blog-summary">A step-by-step guide to building a collaborative filtering recommendation engine using Python and real-world IMDb data.</div>
+      <div class="blog-title">How I Built a Movie Recommendation System</div>
+      <div class="blog-desc">A step-by-step guide to building a collaborative filtering recommendation engine using Python and real-world IMDb data.</div>
       <a class="blog-link" href="blog-post-1.html" target="_blank">Read more <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="blog-card sr sr-delay-1" onclick="window.open('blog-post-2.html', '_blank')">
-      <div class="blog-title">Getting Started with Time Series Forecasting</div>
+    <div class="blog-card sr sr-d1" onclick="window.open('blog-post-2.html','_blank')">
       <div class="blog-date">April 2025</div>
-      <div class="blog-summary">An introduction to time series analysis and forecasting with ARIMA/SARIMA models.</div>
+      <div class="blog-title">Getting Started with Time Series Forecasting</div>
+      <div class="blog-desc">An introduction to time series analysis and forecasting with ARIMA/SARIMA models.</div>
       <a class="blog-link" href="blog-post-2.html" target="_blank">Read more <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="blog-card sr sr-delay-2" onclick="window.open('blog-post-3.html', '_blank')">
-      <div class="blog-title">NLP for Beginners: Text Generation with LSTM</div>
+    <div class="blog-card sr sr-d2" onclick="window.open('blog-post-3.html','_blank')">
       <div class="blog-date">March 2025</div>
-      <div class="blog-summary">Explore the basics of NLP and how to generate creative text using LSTM neural networks.</div>
+      <div class="blog-title">NLP for Beginners: Text Generation with LSTM</div>
+      <div class="blog-desc">Explore the basics of NLP and how to generate creative text using LSTM neural networks.</div>
       <a class="blog-link" href="blog-post-3.html" target="_blank">Read more <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2><span>Contact &amp; Links</span></h2>
-  <div class="card sr">
-    <div class="contact-links">
-      <a href="mailto:ansarishakeel006@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/Ansareze" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/shakilansari006" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.kaggle.com/shakilansari006" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
-      <a href="https://public.tableau.com/profile/shakil.ansari" target="_blank" title="Tableau"><i class="fas fa-table"></i></a>
-      <a href="https://www.medium.com" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
-      <a href="https://www.youtube.com/profile/shakil.ansari" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+<!-- ════════════ CONTACT ════════════ -->
+<section id="contact" class="section-pad">
+  <div class="section-header sr">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-text sr">
+      <p>I'm always open to discussing data science, collaboration opportunities, or just connecting. Feel free to reach out through any of the platforms below.</p>
+      <div class="social-row">
+        <a class="social-btn email" href="mailto:ansarishakeel006@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a class="social-btn github" href="https://github.com/Ansareze" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a class="social-btn linkedin" href="https://linkedin.com/in/shakilansari006" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-btn kaggle" href="https://www.kaggle.com/shakilansari006" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+        <a class="social-btn tableau" href="https://public.tableau.com/profile/shakil.ansari" target="_blank" title="Tableau"><i class="fas fa-table"></i></a>
+        <a class="social-btn medium" href="https://www.medium.com" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+        <a class="social-btn youtube" href="https://www.youtube.com/profile/shakil.ansari" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="download-row">
+        <a class="btn-primary" href="assets/Shakil_Ansari_Resume.pdf" download><i class="fas fa-download"></i> Resume</a>
+        <a class="btn-outline" href="assets/Shakil_Ansari_CoverLetter.pdf" download><i class="fas fa-file-alt"></i> Cover Letter</a>
+      </div>
     </div>
-    <div>
-      <a class="resume-btn" href="assets/Shakil_Ansari_Resume.pdf" download><i class="fas fa-download"></i> Download Resume</a>
-      <a class="resume-btn" href="assets/Shakil_Ansari_CoverLetter.pdf" download><i class="fas fa-file-alt"></i> Cover Letter</a>
+    <div class="sr sr-d2" style="color:var(--text-dim);font-size:0.95rem;line-height:1.8;">
+      <p><strong style="color:var(--text)">Email</strong><br>ansarishakeel006@gmail.com</p>
+      <br>
+      <p><strong style="color:var(--text)">Based in</strong><br>Delhi, India</p>
+      <br>
+      <p><strong style="color:var(--text)">Currently</strong><br>Open to Data Science roles & collaborations</p>
     </div>
   </div>
 </section>
 
-</main>
-
 <footer>
-  &copy; 2025 Shakil Ansari. All rights reserved.
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="https://github.com/Ansareze" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/shakilansari006" target="_blank">LinkedIn</a>
+  </div>
+  <p>&copy; 2025 Shakil Ansari. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
